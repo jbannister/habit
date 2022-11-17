@@ -33,10 +33,10 @@ def habit():
                     description = 'What the program does',
                     epilog = 'Text at the bottom of help')
 
-    parser.add_argument("-c", "--create", required=False)   # C - Create a new habit entry
-    parser.add_argument("list", required=False)             # R - List all habit entries
-    parser.add_argument("-u", "--update", required=False)   # U - Update a habit entry
-    parser.add_argument("-d", "--delete", required=False)   # D - Delete a habit entry
+    parser.add_argument("-c", "--create", help="Create a new habit entry", required=False)  # C
+    parser.add_argument("list", help="List all habit entries")                              # R
+    parser.add_argument("-u", "--update", help="Update a habit entry", required=False)      # U
+    parser.add_argument("-d", "--delete", help="Delete a habit entry", required=False)      # D
 
     #parser.add_argument('filename')           # positional argument
     #parser.add_argument('-c', '--count')      # option that takes a value
