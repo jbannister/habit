@@ -25,6 +25,7 @@ def delete_habit(habit_df: pd.DataFrame, habit: str):
     habit_df.to_csv('habit.csv', index=False)
 
 df_habit = create_habit()
+df_habit['date'] = pd.to_datetime(df_habit['date'], format='%d %b %Y')
 
 def habit():
     global df_habit
@@ -47,6 +48,7 @@ def habit():
 
     args = parser.parse_args()
     # print(args)
+    # print(df_habit.dtypes)
 
     if args.create:
         df_habit = create_habit()
